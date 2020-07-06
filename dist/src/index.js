@@ -7,7 +7,7 @@ exports.MjmlWrapper = exports.MjmlTitle = exports.MjmlText = exports.MjmlTable =
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _browserMjml = _interopRequireDefault(require("browser-mjml"));
+var _mjml4InBrowser = _interopRequireDefault(require("mjml4-in-browser"));
 
 var _mjml = require("./mjml");
 
@@ -158,9 +158,9 @@ function render(email, options) {
     keepComments: false,
     beautify: false,
     minify: true,
-    validationLevel: 'strict'
+    validationLevel: "strict"
   };
-  return (0, _browserMjml["default"])(renderToMjml(email), _objectSpread(_objectSpread({}, defaults), options));
+  return (0, _mjml4InBrowser["default"])(renderToMjml(email), _objectSpread(_objectSpread({}, defaults), options));
 }
 
 function renderToMjml(email) {

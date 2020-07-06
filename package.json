@@ -27,8 +27,8 @@
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
-    "browser-mjml": "^4.2.8",
     "chai": "^4.2.0",
+    "mjml4-in-browser": "^1.1.2",
     "puppeteer": "^2.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -37,6 +37,7 @@
     "yoshi": "^4.28.4"
   },
   "peerDependencies": {
+    "mjml4-in-browser": "^1.1.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
@@ -45,7 +46,6 @@
   },
   "module": "dist/es/src/index.js",
   "dependencies": {
-    "browser-mjml": "^4.2.8",
     "babel-runtime": "~6.25.0"
   },
   "babel": {
