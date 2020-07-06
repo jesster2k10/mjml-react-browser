@@ -1,0 +1,76 @@
+{
+  "name": "mjml-react-browser",
+  "version": "1.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Janus Reith",
+    "email": "mail@janusreith.de"
+  },
+  "homepage": "https://github.com/janus-reith/mjml-react-browser",
+  "bugs": "https://github.com/janus-reith/mjml-react-browser/issues",
+  "main": "dist/src/index.js",
+  "files": [
+    "extensions.js",
+    "utils.js",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "start": "yoshi start",
+    "pretest": "yoshi build",
+    "build": "yoshi build",
+    "test": "yoshi test",
+    "posttest": "yoshi lint",
+    "release": "yoshi release"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "browser-mjml": "^4.2.8",
+    "chai": "^4.2.0",
+    "puppeteer": "^2.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.5",
+    "with-eyes": "^2.0.3",
+    "yoshi": "^4.28.4"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "yoshi": {
+    "hmr": "auto"
+  },
+  "module": "dist/es/src/index.js",
+  "dependencies": {
+    "browser-mjml": "^4.2.8",
+    "babel-runtime": "~6.25.0"
+  },
+  "babel": {
+    "plugins": [
+      "transform-runtime"
+    ],
+    "presets": [
+      "wix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "wix/react",
+    "rules": {
+      "quote-props": 0,
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1,
+          "ignoredNodes": [
+            "JSXElement",
+            "JSXElement *"
+          ]
+        }
+      ]
+    }
+  }
+}
